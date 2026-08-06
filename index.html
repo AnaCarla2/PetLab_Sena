@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/cart.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="container-navbar"></div>
+    <main>
+      <!-- Carrusel -->
+
+      <section class="position-relative">
+        <div
+          id="veterinaryCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#veterinaryCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#veterinaryCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+
+          <!-- Carousel Items -->
+          <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active position-relative">
+              <img
+                src="/assets/punto-vet-clinica-veterinaria-24-horas-en-medellin.jpg"
+                class="d-block w-100 object-fit-cover"
+                alt="Mascota"
+                style="height: 500px"
+              />
+
+              <!-- Overlay -->
+              <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+
+              <!-- Content -->
+              <div
+                class="carousel-caption d-flex align-items-center justify-content-start h-100 text-start"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12">
+                      <h2 class="display-4 fw-bold text-white mb-3">
+                        ¿Le pasó algo a tu mascota? Estamos aquí para ayudarla
+                      </h2>
+                      <p class="lead text-white-50 mb-4">
+                        Las urgencias no se esperan y en PetLab estamos listos
+                        para atenderlas, buscando lo mejor para tu compañero
+                      </p>
+                      <a
+                        href="#"
+                        class="btn btn-carousel btn-lg rounded-pill px-2 py-2 fw-semibold"
+                      >
+                        ¡Visitanos hoy mismo!
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item position-relative w-full">
+              <img
+                src="/assets/ChatGPT Image 22 may 2025, 04_29_19 p.m..png"
+                class="position-absolute w-50 h-100 z-3 end-0"
+                alt="Servicios veterinarios"
+              />
+              <img
+                src="/assets/11_aasasq.jpg"
+                class="d-block w-100 object-fit-cover"
+                alt="Servicios veterinarios"
+                style="height: 500px"
+              />
+
+              <!-- Content -->
+              <div
+                class="carousel-caption d-flex align-items-center justify-content-start h-100 text-start"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12">
+                      <h2 class="display-4 fw-bold text-white mb-3">
+                        ¡Adopta amor, salva una vida!
+                      </h2>
+                      <p class="lead text-white-80 mb-4">
+                        Descubre en nuestra fundación a tu próximo compañero de
+                        cuatro patas y regálale un hogar lleno de cariño.
+                      </p>
+                      <a
+                        href="#"
+                        class="btn btn-carousel btn-lg rounded-pill px-4 py-2 fw-semibold"
+                      >
+                        Conoce el amor
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#veterinaryCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#veterinaryCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- Saludo personalizado -->
+      <section class="py-4">
+        <div class="container">
+          <h2 class="fw-bold mb-1">
+            ¡Hola, <span id="userFirstName">Usuario</span>! 👋
+          </h2>
+          <p class="text-muted mb-0">Bienvenida nuevamente a PetLab,</p>
+        </div>
+      </section>
+
+      <!-- Accesos rápidos -->
+      <section class="py-2">
+        <div class="container">
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-3">
+              <div class="quick-action-card mascotas text-center">
+                <div class="quick-action-icon">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <p class="mb-2 fw-semibold">Mis Mascotas</p>
+                <a href="/mascotas" class="btn btn-sm btn-quick-action w-100"
+                  >Ver mascotas</a
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="quick-action-card cita text-center">
+                <div class="quick-action-icon">
+                  <i class="bi bi-calendar-plus-fill"></i>
+                </div>
+                <p class="mb-2 fw-semibold">Agendar cita</p>
+                <a
+                  href="#"
+                  id="btnAgendarCita"
+                  class="btn btn-sm btn-quick-action w-100"
+                  >Reservar</a
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="quick-action-card mis-citas text-center">
+                <div class="quick-action-icon">
+                  <i class="bi bi-journal-check"></i>
+                </div>
+                <p class="mb-2 fw-semibold">Mis citas</p>
+                <a href="/citas" class="btn btn-sm btn-quick-action w-100"
+                  >Ver citas</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Próxima cita -->
+      <section class="py-3" id="proximaCitaSection">
+        <div class="container">
+          <div class="proxima-cita-banner position-relative overflow-hidden">
+            <div class="proxima-cita-icono">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <div class="proxima-cita-content">
+              <h4 class="fw-bold mb-3">Próxima cita</h4>
+              <p class="mb-1">
+                <strong>Mascota:</strong>
+                <span id="proximaCitaMascota">-</span>
+              </p>
+              <p class="mb-1">
+                <strong>Veterinario:</strong>
+                <span id="proximaCitaVeterinario">-</span>
+              </p>
+              <p class="mb-1">
+                <strong>Fecha:</strong> <span id="proximaCitaFecha">-</span>
+              </p>
+              <p class="mb-1">
+                <strong>Hora:</strong> <span id="proximaCitaHora">-</span>
+              </p>
+              <p class="mb-0">
+                <strong>Estado:</strong>
+                <span id="proximaCitaEstado">-</span>
+              </p>
+            </div>
+          </div>
+          <!-- Se muestra solo si el usuario no tiene citas próximas -->
+          <div
+            class="proxima-cita-vacia text-center d-none"
+            id="proximaCitaVacia"
+          >
+            <i class="bi bi-calendar-heart d-block"></i>
+            <p class="mb-2">No tienes citas próximas agendadas.</p>
+            <a href="#" id="btnAgendarDesdeVacia" class="btn btn-quick-action"
+              >Agendar una cita</a
+            >
+          </div>
+        </div>
+      </section>
+
+
+       <section class="py-4" id="serviciosDestacados">
+        <div class="container">
+          <h4 class="fw-bold mb-4 text-center">Nuestros Servicios</h4>
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-rojo">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <p class="fw-semibold mb-0">Urgencias 24/7</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-azul">
+                  <i class="bi bi-scissors"></i>
+                </div>
+                <p class="fw-semibold mb-0">Cirugías</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-verde">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <p class="fw-semibold mb-0">Vacunación</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-morado">
+                  <i class="bi bi-clipboard2-pulse"></i>
+                </div>
+                <p class="fw-semibold mb-0">Consulta General</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-naranja">
+                  <i class="bi bi-droplet-half"></i>
+                </div>
+                <p class="fw-semibold mb-0">Laboratorio Clínico</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="servicio-card text-center">
+                <div class="servicio-icono bg-teal">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <p class="fw-semibold mb-0">Peluquería y Estética</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- Botones de las categorías -->
+        <div class="m-2" id="categoriesContainer"></div>
+      </section>
+
+      <section id="servicesAndProducts">
+        <div class="container mt-4">
+          <div class="row" id="cardsContainer"></div>
+        </div>
+        <div class="m-2" id="categoriesContainer"></div>
+        <div
+          id="paginationContainer"
+          class="d-flex justify-content-center mt-3"
+        ></div>
+      </section>
+
+      <div id="container-footer" class="container-footer"></div>
+
+      <!-- Modal para reservar servicio -->
+      <div
+        class="modal fade"
+        id="modalReserva"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Reservar Servicio</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <label>Selecciona una fecha:</label>
+              <input
+                type="date"
+                id="inputFecha"
+                class="form-control mb-3"
+                min=""
+              />
+
+              <label>Selecciona una hora:</label>
+              <div
+                id="horasContainer"
+                class="d-flex flex-wrap gap-2 mt-2 mb-3"
+              ></div>
+            </div>
+            <div class="modal-footer">
+              <button id="confirmarReserva" class="btn btn-primary" disabled>
+                Confirmar reserva
+              </button>
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/main.js"></script>
+    <script src="/scripts/scripst.js"></script>
+    <script src="/scripts/reserva.js"></script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/cart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

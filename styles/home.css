@@ -1,0 +1,275 @@
+.carousel-container {
+  padding: 40px;
+}
+
+.carousel-r {
+  border-radius: 40px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #26a699;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #26a699;
+  opacity: 1;
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+}
+.btn-carousel {
+  background-color: #E17B1F !important;
+  color: white !important;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnCard {
+  background-color: #145873;
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.card-title {
+  color: #0000;
+  font-size: medium !important;
+}
+.card {
+  height: 350px !important;
+  cursor: pointer;
+}
+
+.card-hover {
+  transition: transform 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.card-img-top {
+  height: 200px;
+}
+
+.btnCard:hover {
+  background-color: #26a699;
+}
+
+.category-button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #145873;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  color: #26a699;
+  cursor: pointer;
+}
+
+.category-button.active {
+  background-color: #26a699;
+  color: white;
+}
+
+.section-button.active {
+  background-color: #145873 !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #145873 !important;
+}
+
+@media (max-width: 575.98px) {
+  .card-img-top {
+    height: 120px;        
+  }
+
+  .card {
+  height: 280px !important;
+}
+
+}
+
+/* ================================================= */
+/* Reglas nuevas: saludo, accesos rápidos y próxima cita */
+/* ================================================= */
+
+.quick-action-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #eceff1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding: 1.5rem 1rem;
+}
+
+.quick-action-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.quick-action-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-size: 1.4rem;
+}
+
+.quick-action-card.mascotas .quick-action-icon {
+  background-color: #fde8e8;
+  color: #e63946;
+}
+
+.quick-action-card.cita .quick-action-icon {
+  background-color: #dbeafe;
+  color: #0d6efd;
+}
+
+.quick-action-card.mis-citas .quick-action-icon {
+  background-color: #d9f2e6;
+  color: #1a9c62;
+}
+
+a.btn.btn-quick-action {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+}
+
+a.btn.btn-quick-action:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+  color: #ffffff;
+}
+
+.quick-action-card.mascotas a.btn.btn-quick-action {
+  background-color: #e63946;
+  border-color: #e63946;
+}
+.quick-action-card.mascotas a.btn.btn-quick-action:hover {
+  background-color: #c8303c;
+  border-color: #c8303c;
+}
+
+.quick-action-card.mis-citas a.btn.btn-quick-action {
+  background-color: #1a9c62;
+  border-color: #1a9c62;
+}
+.quick-action-card.mis-citas a.btn.btn-quick-action:hover {
+  background-color: #158253;
+  border-color: #158253;
+}
+
+.proxima-cita-banner {
+  border-radius: 18px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff8a3d 0%, #ff5e3a 60%, #7a1f00 100%);
+  color: #fff;
+  padding: 1.5rem 2rem;
+}
+
+.proxima-cita-banner * {
+  color: #fff;
+}
+
+.proxima-cita-icono {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.servicio-card {
+  padding: 1rem 0.5rem;
+}
+
+.servicio-icono {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.servicio-icono.bg-rojo { background-color: #e63946; }
+.servicio-icono.bg-azul { background-color: #0d6efd; }
+.servicio-icono.bg-verde { background-color: #1a9c62; }
+.servicio-icono.bg-morado { background-color: #8956e0; }
+.servicio-icono.bg-naranja { background-color: #ff5e3a; }
+.servicio-icono.bg-teal { background-color: #26a699; }
+
+.proxima-cita-vacia {
+  background-color: #eef4ff;
+  border: 1px dashed #b6cdfd;
+  border-radius: 18px;
+  padding: 2.5rem 1.5rem;
+}
+
+.proxima-cita-vacia i {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-bottom: 0.75rem;
+}
+
+.proxima-cita-vacia a.btn {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .proxima-cita-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .proxima-cita-icono {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.pantalla-principal-wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Pantalla principal */
+.pantalla-principal{
+    display: flex;
+    width: 200vw;
+    height: 100vh;
+    transition: transform 0.6s ease-in-out;
+}
+
+.pantalla-principal.registro-activo {
+    transform: translateX(-100vw);
+}
+
+/* Contenedor de toda la pantalla */
+.contenedor-login {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Div de bienvenida */
+.bienvenida {
+    width: 50%;
+    position: relative;
+    background-color: #c4dbe9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.bienvenida img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 1;
+}
+
+.bienvenida .title {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.bienvenida h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+    font-weight:900;
+}
+
+.bienvenida p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .bienvenida {
+        display: none;
+    }
+}
+
+/* Contenedor de incio de sesion */
+.login {
+    width: 100%; 
+    max-width: 400px; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+ /* imagen superior */
+.login img {
+    width: 120px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.img-login{
+    opacity:0.5;
+}
+
+/* Titulo y parrafo para incicio de sesio */
+.title-login h2{
+    font-size: 16px;
+    font-weight: bold;
+    color: #156082;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.title-login p{
+    font-size: 12px;
+    color:rgb(155, 151, 151) ;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Formulario */
+.login input {
+    width: 100%; 
+    padding: 5px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.mb-3 {
+    width: 100%; 
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Olvido su contraseña */
+.olvido-contrasena{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    font-size: 12px;
+}
+
+.olvido-contrasena a {
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Boton de inicio de sesion */
+
+.button-login{
+    width: 100%;
+    background-color: #156082;
+    color: rgb(195, 188, 188);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 10px;
+    border-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.button-iniciar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Division de inicia sesion con */
+.inicia-con{
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content:center;
+}
+
+.inicia-con h4{
+    font-size: 12px;
+    color: rgb(117, 114, 114);
+    position: relative;
+    z-index:2;
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.inicia-con hr {
+    top: 50%;
+    color: black;
+    width: 100%;
+    z-index: 0.5;
+    height: 15%;
+    left: 0%;
+    right:0%;
+}
+
+/* Incio de sesion con google */
+.inicio-google{
+    width: 100%;
+}
+
+.button-google{
+    width: 100%;
+    border: none;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(72, 69, 69);
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.button-google img {
+    width: 22px;
+    height: auto;
+    margin: 2%;
+}
+
+/* Texto de notienes cuenta y registro */
+.link-registro p {
+    color: rgb(72, 69, 69);
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+.link-registro a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+}
+
+/*! Estolos de la pagina de registro */
+
+.contenedor-register{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Register */
+.register {
+    width: 100%; 
+    max-width: 400px; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.register h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #156082;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+/* mensaje de error en los inputs */
+.error-text {
+    font-size: 12px;
+    color: red;
+    height: 16px;
+    display: block;
+}
+
+/* modal de informacion de registro */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* imagen superior register*/
+.register img {
+    width: 120px; 
+    height: auto;
+    margin-bottom:5px;
+}
+
+.img-register{
+    opacity:0.5;
+}
+
+.register input {
+    width: 100%; 
+    padding: 5px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Informacion lateral texto crea tu cuenta */
+
+.crea-cuenta {
+    width: 50%;
+    position: relative;
+    background-color: #c4dbe9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.crea-cuenta img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 1;
+}
+
+.crea-cuenta .title {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.crea-cuenta h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+    font-weight:900;
+}
+
+.crea-cuenta p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #156082;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+/* icono para mostrar contraseña */
+.input-password-container {
+  position: relative;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 35px; /* espacio para el icono */
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+  pointer-events: auto;
+}
+
