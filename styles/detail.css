@@ -1,0 +1,41 @@
+.volver-link {
+  color: #145873;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.volver-link:hover { color: #26a699; }
+
+.detail-img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 380px;
+}
+
+.detail-categoria {
+  display: inline-block;
+  background: #e3f3f1;
+  color: #26a699;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.detail-precio {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #145873;
+  margin-top: 0.5rem;
+}
+
+.btn-detail-primary {
+  background: linear-gradient(135deg, #26a699, #00c2cb);
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  box-shadow: 0 4px 14px rgba(38, 166, 153, 0.35);
+}
+.btn-detail-primary:hover { color: #fff; transform: translateY(-2px); }

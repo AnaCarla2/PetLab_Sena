@@ -1,7 +1,5 @@
 const cardsContainer = document.getElementById('cardsContainer')
 const categoriesContainer = document.getElementById('categoriesContainer')
-const btnServices = document.getElementById('btnServices')
-const btnProducts = document.getElementById('btnProducts')
 const paginationContainer = document.getElementById('paginationContainer');
 
 let dataFetched = null
@@ -12,16 +10,13 @@ const cardsPerPage = 8;
 
 
 Promise.all([
-  fetch('https://8mameppfds.us-east-1.awsapprunner.com/servicios').then(res => res.json()),
-  fetch('https://8mameppfds.us-east-1.awsapprunner.com/productos').then(res => res.json())
-]).then(([services, products]) => {
-  dataFetched = { services, products };
-  renderCards(dataFetched.services);
-  renderCategories(dataFetched.services);
-  marcarBotonActivo(btnServices, 'section-button');
-}).catch(err => console.error("Error al cargar productos y servicios:", err));
-
-
+fetch('https://8mameppfds.us-east-1.awsapprunner.com/servicios')
+  ]).then(res => res.json())
+  .then(services => {
+    dataFetched = { services };
+    renderCards(services);
+    renderCategories(services);
+  }) .catch(err => console.error("Error al cargar servicios:", err));
 
 
 const renderCards = (cards, isFull = false) => {
@@ -167,21 +162,4 @@ const marcarBotonActivo = (botonSeleccionado, grupoClase) => {
   botonSeleccionado.classList.add('active');
 }
 
-btnServices.addEventListener('click', () => {
-  if (dataFetched) {
-    currentPage = 1
-    renderCards(dataFetched.services, true);
-    renderCategories(dataFetched.services);
-    marcarBotonActivo(btnServices, 'section-button')
-  }
-});
 
-btnProducts.addEventListener('click', () => {
-  currentPage = 1
-  if (dataFetched) {
-    renderCards(dataFetched.products, true)
-    renderCategories(dataFetched.products);
-    marcarBotonActivo(btnProducts, 'section-button')
-
-  }
-});

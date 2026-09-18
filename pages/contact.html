@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar cita | PetLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/contact.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/navbar.css" />
+  <link rel="stylesheet" href="/styles/cart.css" />
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+  <div id="container-navbar"></div>
+  <main>
+    <section class="contacto-section">
+      <h2 class="contacto-title">
+        Agendar cita<br>
+        <span class="destacado">Te esperamos</span>
+      </h2>
+      <form class="contacto-form" action="https://formspree.io/f/mwpokgnr" method="POST">
+        <div>
+          <div class="row">
+            <div class="col">
+              <label for="nombres">Mascota</label>
+              <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="col">
+              <label for="apellidos">Servicio</label>
+              <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="categoria">Categoría: <span class="obligatorio">*</span></label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Seleccione una opción</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="telefono">Fecha</label>
+              <input type="tel" id="telefono" name="telefono">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="consulta-label">Hora</div>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+        </div>
+        </div>
+
+        <div class="mensaje-group">
+          <label for="mensaje">Motivo de la consulta</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <div class="boton-enviar">
+          <button type="submit">Agendar cita</button>
+        </div>
+        <div class="boton-enviar">
+          <button type="submit">Cancelar</button>
+        </div>
+      </form>
+    </section>
+    <div id="container-footer"></div>
+  </main>
+
+  <!-- Scripts para navbar y footer dinámicos -->
+  <script src="/scripts/scripst.js" defer></script>
+  <script src="/scripts/footer.js" defer></script>
+  <script src="/scripts/scripts.js" defer></script>
+  <script src="/scripts/contact.js" defer></script>
+</body>
+
+</html>
