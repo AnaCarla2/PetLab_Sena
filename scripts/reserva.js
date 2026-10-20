@@ -66,6 +66,7 @@ confirmarBtn.addEventListener("click", () => {
   };
   citas.push(nuevaCita);
   localStorage.setItem("petlab_citas", JSON.stringify(citas));
+  mostrarUltimaCita();
 
   bootstrap.Modal.getInstance(document.getElementById("modalReserva")).hide();
 
@@ -73,3 +74,33 @@ confirmarBtn.addEventListener("click", () => {
     `${servicioSeleccionado.nombre} · ${fechaSeleccionada} a las ${horaSeleccionada}`;
   new bootstrap.Modal(document.getElementById("modalReservaConfirmada")).show();
 });
+function mostrarUltimaCita() {
+  const banner = document.getElementById("proximaCitaBanner");
+  const vacia = document.getElementById("proximaCitaVacia");
+  if (!banner || !vacia) return;
+
+  const citas = JSON.parse(localStorage.getItem("petlab_citas")) || [];
+
+  // Sin citas: se oculta el banner y se muestra el mensaje vacío
+  if (citas.length === 0) {
+    banner.classList.add("d-none");
+    vacia.classList.remove("d-none");
+    return;
+  }
+
+  const ultima = citas[citas.length - 1];
+  const mascotas = JSON.parse(localStorage.getItem("petlab_mascotas")) || [];
+  const mascota = mascotas.find(m => m.id === ultima.mascotaId);
+
+  document.getElementById("proximaCitaServicio").textContent = ultima.servicio || "-";
+  document.getElementById("proximaCitaMascota").textContent = mascota ? mascota.nombre : "Sin especificar";
+  document.getElementById("proximaCitaVeterinario").textContent = ultima.veterinario || "Por asignar";
+  document.getElementById("proximaCitaFecha").textContent = ultima.fecha.split("-").reverse().join("/");
+  document.getElementById("proximaCitaHora").textContent = ultima.hora;
+  document.getElementById("proximaCitaEstado").textContent = ultima.estado;
+
+  banner.classList.remove("d-none");
+  vacia.classList.add("d-none");
+}
+
+document.addEventListener("DOMContentLoaded", mostrarUltimaCita);

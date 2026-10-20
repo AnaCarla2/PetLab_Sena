@@ -199,4 +199,10 @@ document.getElementById("btnGuardarCita").addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   renderCitas();
   cargarServiciosReales();
+
+  // Si llegan desde el Home con ?nueva=1, abre directamente el modal de agendar
+  if (new URLSearchParams(window.location.search).get("nueva") === "1") {
+    abrirModalNuevaCita();
+    bootstrap.Modal.getOrCreateInstance(document.getElementById("modalCita")).show();
+  }
 });

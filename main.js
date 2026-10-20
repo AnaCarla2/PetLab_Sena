@@ -9,14 +9,18 @@ let currentPage = 1;
 const cardsPerPage = 8;
 
 
-Promise.all([
+
 fetch('https://8mameppfds.us-east-1.awsapprunner.com/servicios')
-  ]).then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return res.json();
+  })
   .then(services => {
     dataFetched = { services };
     renderCards(services);
     renderCategories(services);
-  }) .catch(err => console.error("Error al cargar servicios:", err));
+  })
+  .catch(err => console.error("Error al cargar servicios:", err));
 
 
 const renderCards = (cards, isFull = false) => {

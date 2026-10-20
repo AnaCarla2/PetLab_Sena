@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
       <div id="veterinaryCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <!-- Indicators -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#veterinaryCarousel" data-bs-slide-to="0" class="active"
+          <button type="button" data-bs-target="#veterinaryCarousel" dscript src="/main.js"ata-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#veterinaryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
@@ -135,7 +135,7 @@
                 <i class="bi bi-calendar-plus-fill"></i>
               </div>
               <p class="mb-2 fw-semibold">Agendar cita</p>
-              <a href="#" id="btnAgendarCita" class="btn btn-sm btn-quick-action w-100">Reservar</a>
+              <a href="/pages/citas.html?nueva=1" id="btnAgendarCita" class="btn btn-sm btn-quick-action w-100">Reservar</a>
             </div>
           </div>
           <div class="col-6 col-md-3">
@@ -154,12 +154,16 @@
     <!-- Próxima cita -->
     <section class="py-3" id="proximaCitaSection">
       <div class="container">
-        <div class="proxima-cita-banner position-relative overflow-hidden">
+        <div id="proximaCitaBanner" class="proxima-cita-banner position-relative overflow-hidden">
           <div class="proxima-cita-icono">
             <i class="bi bi-heart-fill"></i>
           </div>
           <div class="proxima-cita-content">
-            <h4 class="fw-bold mb-3">Próxima cita</h4>
+            <h4 class="fw-bold mb-3">Última cita solicitada</h4>
+            <p class="mb-1">
+  <strong>Servicio:</strong>
+  <span id="proximaCitaServicio">-</span>
+</p>
             <p class="mb-1">
               <strong>Mascota:</strong>
               <span id="proximaCitaMascota">-</span>
@@ -184,7 +188,7 @@
         <div class="proxima-cita-vacia text-center d-none" id="proximaCitaVacia">
           <i class="bi bi-calendar-heart d-block"></i>
           <p class="mb-2">No tienes citas próximas agendadas.</p>
-          <a href="#" id="btnAgendarDesdeVacia" class="btn btn-quick-action">Agendar una cita</a>
+          <a href="/pages/citas.html?nueva=1" id="btnAgendarDesdeVacia" class="btn btn-quick-action">Agendar una cita</a>
         </div>
       </div>
     </section>
@@ -322,8 +326,7 @@
   <script src="/scripts/reserva.js"></script>
   <script src="/scripts/footer.js"></script>
   <script src="/scripts/cart.js"></script>
-  <script src="/scripts/mascotas.js"></script>
-  <script src="/scripts/citas.js"></script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
